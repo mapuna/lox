@@ -69,9 +69,14 @@ public class Scanner {
             case '>' -> addToken(match('=') ? GREATER_EQUAL : GREATER);
             case '/' -> {
                 if (match('/')) {
+                    // It is a double slash comment
                     while (peek() != '\n' && !isAtEnd())
                         advance();
+                } else if (match('*')) {
+                    // For /* ... */ style block comments
+                    blockComment();
                 } else {
+                    // It is the division (SLASH) operator
                     addToken(SLASH);
                 }
             }
@@ -87,6 +92,24 @@ public class Scanner {
                     Lox.error(line, "Unexpected character.");
                 }
             }
+        }
+    }
+
+    private void blockComment() {
+        while (peek() != '*' && peekNext() != '/' && !isAtEnd()) {
+            if (peek() == '\n')
+                line++;
+            advance();
+        }
+
+        if (isAtEnd()) {
+            Lox.error(line, "Non-terminated block comment.");
+            return;
+        }
+
+        if (peek() == '*' && peekNext() == '/') {
+            advance();
+            advance();
         }
     }
 
