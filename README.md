@@ -11,5 +11,5 @@ Required `Java >= 13` if one does not want to refactor the code.
   * Added support for C-style `/* ... */` block comments (challenge problem!)
 - `20220831`: Building AST with Visitor Pattern
 - `20220901` Expression parser done!
-  *TODO: challenge problems -- `comma` operator support, Ternary `?:` operator support
+  * TODO: challenge problems -- `comma` operator support, Ternary `?:` operator support
 - 
