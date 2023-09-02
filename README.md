@@ -12,4 +12,4 @@ Required `Java >= 13` if one does not want to refactor the code.
 - `20230831`: Building AST with Visitor Pattern
 - `20230901` Expression parser done!
   * TODO: challenge problems -- `comma` operator support, Ternary `?:` operator support
-- `20230902`: Expression evaluator in progress.
+- `20230902`: Expression evaluator done.
