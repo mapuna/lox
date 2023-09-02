@@ -1,6 +1,6 @@
 package org.mapuna.lox;
 
-public class AstPrinter implements Expr.Visitor<String> {
+class AstPrinter implements Expr.Visitor<String> {
     @Override
     public String visitBinaryExpr(Expr.Binary expr) {
         return parenthesize(expr.operator.lexeme, expr.left, expr.right);

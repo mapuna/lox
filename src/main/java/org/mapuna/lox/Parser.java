@@ -7,7 +7,7 @@ import static org.mapuna.lox.TokenType.*;
 /**
  * A Recursive descent parser -- cannot allow a left recursion.
  */
-public class Parser {
+class Parser {
     /**
      * The Lox Grammar
      * ---------------
