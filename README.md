@@ -93,3 +93,4 @@ DIGIT          → "0" ... "9" ;
   * TODO: challenge problems -- `comma` operator support, Ternary `?:` operator support
 - `20230902`: Expression evaluator done.
 - `20230903`: Take #1 -- statement parsing and evaluation done. Global variable handling is done.
+- `20220904`: Take #2 -- variable assignment done. Next TODO: Scoping.
