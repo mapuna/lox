@@ -94,3 +94,6 @@ DIGIT          → "0" ... "9" ;
 - `20230902`: Expression evaluator done.
 - `20230903`: Take #1 -- statement parsing and evaluation done. Global variable handling is done.
 - `20220904`: Take #2 -- variable assignment done. Next TODO: Scoping.
+- `20230909`: Take #3 -- completed statement execution with scoping.
+  * TODO: Fix REPL to execute expressions and statements
+  * Fix implicit assignment to `nil` -- make it an error if a var is not assigned in a scope.
