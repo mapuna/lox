@@ -4,7 +4,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 class Environment {
+    final Environment enclosing;
     private final Map<String, Object> values = new HashMap<>();
+
+    // For global scope's environment
+    Environment() {
+        enclosing = null;
+    }
+
+    // For environments that have a parent environment
+    Environment(Environment enclosing) {
+        this.enclosing = enclosing;
+    }
 
     void define(String name, Object value) {
         values.put(name, value);
@@ -15,12 +26,21 @@ class Environment {
             return values.get(name.lexeme);
         }
 
+        if (enclosing != null) {
+            return enclosing.get(name);
+        }
+
         throw new RuntimeError(name, "Undefined variable '" + name.lexeme + "'.");
     }
 
     public void assign(Token name, Object value) {
         if (values.containsKey(name.lexeme)) {
             values.put(name.lexeme, value);
+            return;
+        }
+
+        if (enclosing != null) {
+            enclosing.assign(name, value);
             return;
         }
 
