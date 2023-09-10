@@ -97,4 +97,5 @@ DIGIT          → "0" ... "9" ;
 - `20230908`: Take #3 -- completed statement execution with scoping.
   * TODO: Fix REPL to execute expressions and statements
   * Fix implicit assignment to `nil` -- make it an error if a var is not assigned in a scope.
-- `20230908`: Completed control flow (if/else, while, for)
+- `20230908`: Completed control flow (`if`/`else`, `while`, `for`)
+- `20230910`: Completed function decls and calls. Starting with closures, resolving and binding."
