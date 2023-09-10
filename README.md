@@ -99,3 +99,4 @@ DIGIT          → "0" ... "9" ;
   * Fix implicit assignment to `nil` -- make it an error if a var is not assigned in a scope.
 - `20230908`: Completed control flow (`if`/`else`, `while`, `for`)
 - `20230910`: Completed function decls and calls. Starting with closures, resolving and binding."
+- `20230910`: Closures work!
