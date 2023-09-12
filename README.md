@@ -96,7 +96,9 @@ DIGIT          → "0" ... "9" ;
 - `20220904`: Take #2 -- variable assignment done. Next TODO: Scoping.
 - `20230908`: Take #3 -- completed statement execution with scoping.
   * TODO: Fix REPL to execute expressions and statements
-  * Fix implicit assignment to `nil` -- make it an error if a var is not assigned in a scope.
+  * TODO: Fix implicit assignment to `nil` -- make it an error if a var is not assigned in a scope.
 - `20230908`: Completed control flow (`if`/`else`, `while`, `for`)
 - `20230910`: Completed function decls and calls. Starting with closures, resolving and binding."
 - `20230910`: Closures work!
+- `20230912`: Scope resolution and semantic analysis works.
+  *  TODO: Extend the resolver to report an error if a local variable is never used.
