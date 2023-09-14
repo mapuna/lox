@@ -103,5 +103,6 @@ DIGIT          → "0" ... "9" ;
 - `20230912`: Scope resolution and semantic analysis works.
   *  TODO: Extend the resolver to report an error if a local variable is never used.
 - `20230912`: `class` syntax works now!
-- `20230912`: Try #1 : Supporting `this` not working yet!
-- `20230914`: Try #2 : Fixed `this`.
+- `20230912`: Try #1 -- Supporting `this` not working yet!
+- `20230914`: Try #2 -- Fixed `this`.
+- `20230914`: Try #3 -- Added `init` as a special method -- constructor (like `python`'s `__init__`). Still an error resolving this properly. Will come back to later to resolve the problem after inheritence. 
