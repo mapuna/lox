@@ -102,4 +102,6 @@ DIGIT          → "0" ... "9" ;
 - `20230910`: Closures work!
 - `20230912`: Scope resolution and semantic analysis works.
   *  TODO: Extend the resolver to report an error if a local variable is never used.
-- `20230912`: `class` syntax works now! 
+- `20230912`: `class` syntax works now!
+- `20230912`: Try #1 : Supporting `this` not working yet!
+- `20230914`: Try #2 : Fixed `this`.
